@@ -1,0 +1,16 @@
+<template name="Header">
+    <div class="ui top fixed borderless inverted menu">
+      <img style="max-height: 300px" class="ui fluid image" src="http://az616578.vo.msecnd.net/files/2016/05/16/635990089599038074-2122984680_books.jpg">
+        <h1><a class="item" href="{{pathFor 'Home_Page'}}"><h1>UH Manoa ICS Study Buddy</h1></a></h1>
+  <div class="ui container">
+    <div class="ui inverted menu">
+       <a href="#" class="item">{{> loginButtons }} </a>
+      <a class="{{ isActiveRoute 'Profile_Page'}} item" href="{{ pathFor 'Profile_Page' }}">Profile </a>
+
+    <a class="{{ isActiveRoute 'Calender_Page'}} item" href="{{ pathFor 'Calender_Page' }}">Calender</a>
+    <a class="{{ isActiveRoute 'Add_Meeting_Page'}} item" href="{{ pathFor 'Add_Meeting_Page' }}">Schedule Meetup</a>
+    <a class="{{ isActiveRoute 'Leaderboard_Page'}} item" href="{{ pathFor 'Leaderboard_Page' }}">Leaderboard</a>
+</div>
+    </div>
+  </div>
+</template>
