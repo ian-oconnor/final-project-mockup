@@ -1,23 +1,40 @@
 <template name="Add_Meeting_Page">
-  {{#If_Logged_In}}
-    <div class="ui text container">
-      {{#if Template.subscriptionsReady}}
-        <table style="margin-top: 20px" class="ui celled table">
-          <thead>
-          <tr>
-            <th>Name</th>
-            <th>Quantity</th>
-            <th>Edit</th>
-          </tr>
-          </thead>
-
-          <tbody>
-
-          </tbody>
-        </table>
-      {{else}}
-        {{> Loading}}
-      {{/if}}
-    </div>
-  {{/If_Logged_In}}
+ <div style="padding-top: 100px" class="ui container">
+   <h1 class="ui inverted">Schedule A Study Session</h1>
+   <div class="ui inverted form">
+     <div class="inline fields">
+       <div class="field">
+         <label>Class Name</label>
+         <input type="text" name="class-name" placeholder="ICS ###">
+       </div>
+       <label for="rank">Select your rank:</label>
+       <div class="field">
+         <div class="ui radio checkbox">
+           <input type="radio" name="rank" checked="" tabindex="0" class="hidden">
+           <label>Grasshopper</label>
+         </div>
+       </div>
+       <div class="field">
+         <div class="ui radio checkbox">
+           <input type="radio" name="rank" tabindex="0" class="hidden">
+           <label>Master</label>
+         </div>
+       </div>
+       <button class="ui button">I need help now!</button>
+     </div>
+ </div>
+   <form class="ui inverted form">
+     <div class="inline fields">
+   <div class="field">
+     <label>Date</label>
+     <input type="text" name="first-name" placeholder="mm/dd/yy">
+   </div>
+   <div class="field">
+     <label>Time</label>
+     <input type="text" name="last-name" placeholder="3:00">
+   </div>
+   <button class="ui button" type="submit">Submit</button>
+       </div>
+   </form>
+   </div>
 </template>
